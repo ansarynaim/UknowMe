@@ -6,3 +6,7 @@ It consists of the questions about me and if you score high means you know me we
 ## Tech Stack
 
 **Node.js,VanillaJS**
+
+## Package Used
+
+**.readline-sync,∙ chalk**
