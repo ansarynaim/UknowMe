@@ -2,12 +2,15 @@ const readLineSync = require('readline-sync');
 const chalk = require('chalk');
 let score = 0;
 
+//getting the value of name from the user using readlinesync inbuilt nodejs package
+
 let userName = readLineSync.question(chalk.black.bgGreen.bold("Heyo! may i have your name please?\n"));
 
 console.log(chalk.bgYellow.whiteBright("welcome to quizMania quizz competition " + userName));
 
 console.log(chalk.yellowBright("\nThis quizz contains 5 questions ,every right answer will let me know how close you are to me.\n\n"))
 
+//array of objects that contains question and anwers in key value pair
 const easy = [
   {
     question: "Question 1 : What's the name of my hometown?\n" + "1. Gorakhpur \n" + "2. Nautanwa \n" + "3. Delhi \n" + "4. Noida \n",
@@ -31,6 +34,7 @@ const easy = [
   }
 ]
 
+
 const play = (question, answer) => {
   let userAnswer = readLineSync.question(question);
 
@@ -53,7 +57,8 @@ const chooseQuestion = () => {
     play(easy[i].question, easy[i].answer)
   }
 }
-console.log(chalk.bgYellow.white("Your total score is: " + score))
+
 
 
 chooseQuestion();
+console.log(chalk.bgYellow.white("Your Final score is: " + score))
